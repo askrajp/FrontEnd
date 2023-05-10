@@ -1,0 +1,44 @@
+.edit-profile-list-item {
+    width: 100%;
+  }
+
+  :root {
+    --color-primary: #212121;
+    --color-secondary: #757575;
+    --color-background: #F5F5F5;
+    --color-text: #FFFFFF;
+    --color-accent: #BDBDBD;
+}
+
+.form-container {
+    background-color: var(--color-background);
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    color: var(--color-primary);
+}
+
+.form-container label {
+    color: var(--color-secondary);
+}
+
+.form-container input,
+.form-container textarea {
+    border: 1px solid var(--color-accent);
+}
+
+.form-container .form-check-label {
+    color: var(--color-secondary);
+}
+
+.form-container button {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.form-container button:disabled {
+    background-color: var(--color-accent);
+}

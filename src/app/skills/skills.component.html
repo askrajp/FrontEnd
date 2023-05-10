@@ -1,0 +1,26 @@
+<div class="container mt-5" id="skills-section">
+  <h2 class="text-center mb-4">Habilidades</h2>
+  <div class="row">
+    <ng-container *ngFor="let category of skillsByCategory.keys()">
+      <div class="col-4">
+        <div class="skill-card"> 
+          <h3>{{ category }}</h3>
+          <ul>
+            <ng-container *ngFor="let skill of skillsByCategory.get(category)">
+              <li>{{ skill.name }}
+                <span class="skill-actions" *ngIf="isLoggedIn">
+                  <button (click)="openEditSkillDialog(skill)">Editar</button>
+                  <button (click)="openDeleteSkillDialog(skill)">Eliminar</button>
+                </span>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="skill-actions" *ngIf="isLoggedIn">
+    <button (click)="openAddSkillDialog()">Agregar Habilidad</button>
+  </div>
+</div>
+

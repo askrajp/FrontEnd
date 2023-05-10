@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Agregar proyecto</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addProjectForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre del proyecto</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Enlace</mat-label>
+      <input matInput formControlName="link" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="addProjectForm.invalid">Agregar</button>
+</div>

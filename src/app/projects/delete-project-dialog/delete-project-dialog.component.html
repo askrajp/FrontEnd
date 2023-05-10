@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Eliminar proyecto</h1>
+<div mat-dialog-content>
+  <p>¿Estás seguro de que quieres eliminar este proyecto?</p>
+  <p><strong>{{ data.name }}</strong></p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">No</button>
+  <button mat-button color="warn" (click)="onConfirm()">Sí</button>
+</div>

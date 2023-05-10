@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: var(--color-text);
+  }
+  
+  .navbar-light .nav-link {
+    color: var(--color-text);
+  }
+  
+  .navbar-light .nav-link:hover,
+  .navbar-light .nav-link:focus {
+    color: var(--color-primary);
+  }
+  
+  .navbar-light .nav-link.active {
+    color: var(--color-secondary);
+  }
+  

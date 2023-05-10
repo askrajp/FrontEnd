@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Agregar habilidad</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addSkillForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de la habilidad</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Categoría</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="Frontend">Frontend</mat-option>
+        <mat-option value="Backend">Backend</mat-option>
+        <mat-option value="Database Management">Database Management</mat-option>
+        <mat-option value="Others">Others</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="addSkillForm.invalid">Agregar</button>
+</div>

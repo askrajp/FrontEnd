@@ -1,0 +1,13 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 130px);
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    margin-bottom: 130px; 
+  }
+  
+  
+ 

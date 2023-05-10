@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center mb-4">Editar proyecto</h2>
+    <form [formGroup]="editProjectForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="projectName">Nombre del proyecto</label>
+        <input type="text" id="projectName" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="projectDescription">Descripción</label>
+        <input type="text" id="projectDescription" class="form-control" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="projectLink">Enlace</label>
+        <input type="text" id="projectLink" class="form-control" formControlName="link">
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2" (click)="close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!editProjectForm.valid">Guardar</button>
+      </div>
+    </form>
+  </div>
+  

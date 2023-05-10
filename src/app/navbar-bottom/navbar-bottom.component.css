@@ -1,0 +1,54 @@
+.footer {
+  background-color: #f0f0f0;
+  text-align: justify;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+}
+
+
+
+
+
+.footer .container {
+  padding: 1px;
+}
+
+.about-title,
+.links-title,
+.contact-title {
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.about-text,
+.contact-text {
+  color: #4a4a4a;
+}
+
+.icon-link {
+  color: #4a4a4a;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: #333030;
+}
+
+.footer-bottom {
+  padding: 10px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 16px; 
+}
+
+.contact-text {
+  font-size: 12px; 
+  margin-bottom: 0.5rem; 
+}

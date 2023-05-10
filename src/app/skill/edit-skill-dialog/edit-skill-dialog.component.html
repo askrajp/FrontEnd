@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center mb-4">Editar habilidad</h2>
+    <form [formGroup]="editSkillForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="skillName">Nombre de la habilidad</label>
+        <input type="text" id="skillName" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="skillCategory">Categoría</label>
+        <select id="skillCategory" class="form-control" formControlName="category">
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Database Management">Database Management</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2" (click)="close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!editSkillForm.valid">Guardar</button>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,19 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~fontawesome-free/css/all.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+:root{
+    --color-primary: #212121;
+    --color-secondary: #757575;
+    --color-background: #F5F5F5;
+    --color-text: #FFFFFF;
+    --color-accent: #BDBDBD;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+  }

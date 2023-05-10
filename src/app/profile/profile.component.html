@@ -1,0 +1,17 @@
+<div class="container mt-5" *ngIf="userProfile">
+    <h2 class="text-center mb-4">Acerca de mí</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="./assets/askra.png" alt="Foto de perfil" class="img-thumbnail">
+      </div>
+      <div class="col-md-8">
+        <h3>{{ userProfile.firstName }} {{ userProfile.lastName }}</h3>
+        <p><strong>{{ userProfile.occupation }}</strong></p>
+        <p>{{ userProfile.description }}</p>
+        <p>Edad: {{ userAge }} años</p>
+        <p>Residencia: {{ userProfile.residence }}</p>
+        <p>Disponibilidad de movilidad: {{ userProfile.mobilityAvailability ? 'Sí' : 'No' }}</p>
+        </div>
+    </div>
+  </div>
+  

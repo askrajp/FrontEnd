@@ -1,0 +1,70 @@
+.container {
+    margin-top: 5rem;
+  }
+  
+  h2.text-center {
+    font-size: 24px;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+.project-card {
+    background-image: url('./../../assets/FondoCardsProyecs.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    }
+  
+  .project-card h3 {
+    font-size: 20px;
+    color: #1A237E;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card p {
+    font-size: 18px;
+    color: #1A237E;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    display: block;
+  }
+  
+  .project-card .material-icons {
+    font-size: 24px;
+    color: var(--color-primary);
+    margin-right: 5px;
+  }
+  
+  .project-actions {
+    margin-top: 1rem;
+  }
+  
+  .project-actions button {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  button {
+   
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: var(--color-accent);
+    border: 3px solid var(--color-secondary);
+  }
+  
