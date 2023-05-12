@@ -31,6 +31,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { ProyectsComponent } from './proyects/proyects.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
+import { EditEducationDialogComponent } from './education/edit-education-dialog/edit-education-dialog.component';
+import { AddEducationDialogComponent } from './education/add-education-dialog/add-education-dialog.component';
+import { DeleteEducationDialogComponent } from './education/delete-education-dialog/delete-education-dialog.component';
 
 
 
@@ -55,6 +60,9 @@ import { ProyectsComponent } from './proyects/proyects.component';
     EditProjectDialogComponent,
     DeleteProjectDialogComponent,
     ProyectsComponent,
+    EditEducationDialogComponent,
+    AddEducationDialogComponent,
+    DeleteEducationDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +83,7 @@ import { ProyectsComponent } from './proyects/proyects.component';
     MatTableModule,
     NgxPageScrollModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule {

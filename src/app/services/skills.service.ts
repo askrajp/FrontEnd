@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SkillsService {
-  private apiUrl = 'http://localhost:8080/api/skills';
+  private apiUrl = 'https://askrabe.onrender.com/api/skills';
 
   constructor(private http: HttpClient) {}
 

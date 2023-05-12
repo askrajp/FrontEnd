@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, tap } from 'rxjs';
 import { UserProfile } from '../models/user-profile';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { UserProfile } from '../models/user-profile';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:8080/api/user';
+  private apiUrl = 'https://askrabe.onrender.com/api/user';
   private loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) {
@@ -21,9 +21,15 @@ export class AuthService {
       email: email,
       password: password
     };
-
-    return this.http.post<any>(`${this.apiUrl}/login`, loginData);
+  
+    return this.http.post<any>(`${this.apiUrl}/login`, loginData).pipe(
+      tap((res: any) => {
+        localStorage.setItem('authToken', res.jwt);
+        this.setLoggedIn(true);
+      })
+    );
   }
+  
 
   getEmail(id: number): Observable<string> {
     return this.http.get<string>(`${this.apiUrl}/email/${id}`);

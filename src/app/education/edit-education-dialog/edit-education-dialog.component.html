@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="text-center mb-4">Editar educación</h2>
+    <form [formGroup]="editEducationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="courseTitle">Título del curso</label>
+        <input type="text" id="courseTitle" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="institutionName">Nombre de la institución</label>
+        <input type="text" id="institutionName" class="form-control" formControlName="institution">
+      </div>
+      <div class="form-group">
+        <label for="yearsAttended">Años asistidos</label>
+        <input type="text" id="yearsAttended" class="form-control" formControlName="years">
+      </div>
+      <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-secondary mr-2" (click)="close()">Cancelar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!editEducationForm.valid">Guardar</button>
+      </div>
+    </form>
+  </div>

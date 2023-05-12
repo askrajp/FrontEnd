@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Agregar educación</h1>
+<div mat-dialog-content>
+  <form [formGroup]="addEducationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>Título del curso</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre de la institución</mat-label>
+      <input matInput formControlName="institution" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Años asistidos</mat-label>
+      <input matInput formControlName="years" />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="addEducationForm.invalid">Agregar</button>
+</div>
