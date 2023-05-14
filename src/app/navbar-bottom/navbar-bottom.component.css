@@ -8,9 +8,9 @@
   height: 130px;
 }
 
-
-
-
+.rowBotton {
+  margin-top: 1%;
+}
 
 .footer .container {
   padding: 1px;
@@ -40,6 +40,9 @@
 
 .footer-bottom {
   padding: 10px;
+  position:absolute;
+  width: 100%;
+  bottom:0px;
   background-color: #e0e0e0;
   text-align: center;
 }

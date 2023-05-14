@@ -17,9 +17,9 @@ export class AddEducationDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<AddEducationDialogComponent>
   ) {
     this.addEducationForm = this.fb.group({
-      title: ['', Validators.required],
-      institution: ['', Validators.required],
-      years: ['', Validators.required]
+      courseTitle: ['', Validators.required],
+      institutionName: ['', Validators.required],
+      yearsAttended: ['', Validators.required]
     });
   }
 

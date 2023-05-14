@@ -1,5 +1,6 @@
 .container {
   margin-top: 5rem;
+  align-content: center;
 }
 
 h2.text-center {
@@ -23,13 +24,22 @@ h2.text-center {
   background-image: url('./../../assets/FondoCardsSkills.jpg');
   background-size: cover;
   background-position: center;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  width: 400px; 
-  height: 225px; 
+  height: 250px; 
   text-align: left;
+  border-bottom: 3px solid #003f6c;
+  transition-property: all;
+  transition-duration: .3s;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+.skill-card:hover {
+  border-bottom: 9px solid #003f6c;
 }
 
 .skill-card h3 {
@@ -50,28 +60,52 @@ h2.text-center {
   color: white;
   margin-bottom: 0.5rem;
   font-style: italic;
+  display: flex;
+  justify-content: space-between;
 }
 
-.skill-actions {
-  margin-top: 1rem;
-}
 
 .skill-actions button {
-  font-size: 16px;
   margin-left: 10px;
-  text-align: center;
-}
-
-
-button {
- 
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  padding: 3px;
+  transition-property: all;
+  transition-duration: .1s;
+  background: none;
+  color:black;
   font-size: 16px;
-  font-weight: bold;
+  }
+
+  button {
+    border: none;
+    background-color:none;
+     font-size: 16px;
+     font-weight: bold;
+     transition-property: all;
+     transition-duration: 0.3s;
+     border: none!important;
+   }
+   
+  button:hover {
+    transform: scale(1.1);
+     }
+
+.icon-add{
+  color: #020202;
+  font-size: 20px;
 }
 
-button:hover {
-  background-color: var(--color-accent);
-  border: 3px solid var(--color-secondary);
-}
+.skill-actions-add button{
+  margin-top: 25px;
+  margin-left: 49%;
+  margin-right: 49%;
+  align-content: center;
+  font-size: 25px;
+  background-color: #f5f5f5!important;
+  color: black;
+  transition-property: all;
+  transition-duration: 0.3s;
+  }
+
+  .skill-actions-add button:hover{
+  transform: scale(1.3);
+  }

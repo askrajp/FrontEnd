@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
-  }
+      }
   
   .mat-card-title {
     font-size: 20px;
@@ -33,7 +33,7 @@
   .mat-card-subtitle {
     font-size: 16px;
     color: var(--color-secondary);
-    margin-top: 5px;
+    margin-top: 10px;
   }
   
   .mat-card-content p {
@@ -42,3 +42,45 @@
     text-align: end;
   }
   
+  .mat-mdc-card{
+    border-left: 3px solid #1443bd!important;
+  }
+
+  .addButton{
+    background-color: #f5f5f5!important;
+    margin-top: 10px;
+    }
+
+  .education-actions{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    }
+
+  .education-actions button {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    button {
+      border: none;
+      background-color: #fff;
+       font-size: 16px;
+       font-weight: bold;
+       transition-property: all;
+       transition-duration: 0.3s;
+       border: none!important;
+     }
+     
+     button:hover {
+    transform: scale(1.1);
+     }
+     
+  .icon-edit,
+  .icon-delete,
+  .icon-add {
+     color: #020202;
+     font-size: 20px;
+   
+   }
+   

@@ -1,19 +1,20 @@
-<<div class="container mt-5" id="education-section">
+<div class="container mt-5" id="education-section">
   <h2 class="text-center mb-4">Educación</h2>
+  <hr>
   <div class="row">
     <ng-container *ngFor="let education of educations">
       <div class="col-md-6">
         <mat-card class="mb-4">
           <mat-card-header>
-            <mat-card-title>{{ education.title }}</mat-card-title>
-            <mat-card-subtitle>{{ education.institution }}</mat-card-subtitle>
+            <mat-card-title>{{ education.courseTitle }}</mat-card-title>
+            <mat-card-subtitle>{{ education.institutionName }}</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>{{ education.years }}</p>
+            <p>{{ education.yearsAttended }}</p>
           </mat-card-content>
           <div class="education-actions" *ngIf="isLoggedIn">
-            <button (click)="openEditEducationDialog(education)">Editar</button>
-            <button (click)="openDeleteEducationDialog(education)">Eliminar</button>
+            <button (click)="openEditEducationDialog(education)"><i class="fas fa-pen"></i></button>
+            <button (click)="openDeleteEducationDialog(education)">  <i class="fas fa-trash"></i></button>
           </div>
         </mat-card>
       </div>
@@ -21,7 +22,9 @@
   </div>
   <div class="row" *ngIf="isLoggedIn">
     <div class="col-md-12 text-center">
-      <button (click)="openAddEducationDialog()">Agregar educación</button>
+      <button (click)="openAddEducationDialog()" class="addButton">
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
   </div>
 </div>

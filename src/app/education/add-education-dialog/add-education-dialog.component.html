@@ -3,15 +3,15 @@
   <form [formGroup]="addEducationForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="outline">
       <mat-label>Título del curso</mat-label>
-      <input matInput formControlName="title" />
+      <input matInput formControlName="courseTitle" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Nombre de la institución</mat-label>
-      <input matInput formControlName="institution" />
+      <input matInput formControlName="institutionName" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Años asistidos</mat-label>
-      <input matInput formControlName="years" />
+      <input matInput formControlName="yearsAttended" />
     </mat-form-field>
   </form>
 </div>

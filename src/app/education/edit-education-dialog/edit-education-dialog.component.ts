@@ -17,9 +17,9 @@ export class EditEducationDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: Education
   ) {
     this.editEducationForm = this.fb.group({
-      title: [data.title, Validators.required],
-      institution: [data.institution, Validators.required],
-      years: [data.years, Validators.required],
+      courseTitle: [data.courseTitle, Validators.required],
+      institutionName: [data.institutionName, Validators.required],
+      yearsAttended: [data.yearsAttended, Validators.required],
     });
   }
 

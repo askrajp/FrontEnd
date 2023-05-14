@@ -1,13 +1,13 @@
 export class Education {
     id: number;
-    title: string;
-    institution: string;
-    years: string;
+    courseTitle: string;
+    institutionName: string;
+    yearsAttended: string;
 
-    constructor(id: number, title: string, institution: string, years: string) {
+    constructor(id: number, courseTitle: string, institutionName: string, yearsAttended: string) {
         this.id = id;
-        this.title = title;
-        this.institution = institution;
-        this.years = years;
+        this.courseTitle = courseTitle;
+        this.institutionName = institutionName;
+        this.yearsAttended = yearsAttended;
     }
 }

@@ -1,5 +1,6 @@
-<div class="container mt-5" id="skills-section">
+<div class="container" id="skills-section">
   <h2 class="text-center mb-4">Habilidades</h2>
+  <hr>
   <div class="row">
     <ng-container *ngFor="let category of skillsByCategory.keys()">
       <div class="col-4">
@@ -8,10 +9,14 @@
           <ul>
             <ng-container *ngFor="let skill of skillsByCategory.get(category)">
               <li>{{ skill.name }}
-                <span class="skill-actions" *ngIf="isLoggedIn">
-                  <button (click)="openEditSkillDialog(skill)">Editar</button>
-                  <button (click)="openDeleteSkillDialog(skill)">Eliminar</button>
-                </span>
+                <div class="skill-actions" *ngIf="isLoggedIn">
+                  <button (click)="openEditSkillDialog(skill)">
+                     <i class="fas fa-pen"></i>
+                   </button>
+                  <button (click)="openDeleteSkillDialog(skill)">
+                    <i class="fas fa-trash"></i>
+                   </button>
+                  </div>
               </li>
             </ng-container>
           </ul>
@@ -19,8 +24,13 @@
       </div>
     </ng-container>
   </div>
-  <div class="skill-actions" *ngIf="isLoggedIn">
-    <button (click)="openAddSkillDialog()">Agregar Habilidad</button>
+</div>
+   <div class="skill-actions" *ngIf="isLoggedIn">
+     <div class="skill-actions-add">
+     <button (click)="openAddSkillDialog()"> 
+      <i class="fas fa-plus"></i>
+    </button>
   </div>
 </div>
+
 
