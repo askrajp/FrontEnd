@@ -10,6 +10,10 @@
     --color-accent: #BDBDBD;
 }
 
+.mt-5{
+    margin-top: 6rem!important;
+}
+
 .form-container {
     background-color: var(--color-background);
     border-radius: 5px;

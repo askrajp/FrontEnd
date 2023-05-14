@@ -13,7 +13,7 @@
 }
 
 .footer .container {
-  padding: 1px;
+  padding: 10px;
 }
 
 .about-title,
@@ -54,4 +54,8 @@
 .contact-text {
   font-size: 12px; 
   margin-bottom: 0.5rem; 
+}
+
+.a .contact-text:hover{
+  cursor: pointer;
 }

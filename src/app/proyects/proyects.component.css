@@ -24,9 +24,8 @@
     background: #fff;
     box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
     border-left: 3px solid #0170bf!important;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 5px;
    }
   
   .project-card:hover{
@@ -45,15 +44,27 @@
     margin-bottom: 1rem;
   }
   
-  .project-card a {
+  .project-card a{
+    text-decoration: underline white;
+
+  }
+
+  project-card a:hover{
+    text-decoration: underline white!important;
+  }
+
+  .animation {
     display: block;
     transition-property: all;
     transition-duration: 10s;
+    width: 24px;
+    text-decoration: none;
   }
   
-  .project-card a:hover{
-    rotate: 720;
+  .animation:hover{
+    transform: rotate(720deg);
   }
+
   .project-card .material-icons {
     font-size: 24px;
     color: var(--color-primary);

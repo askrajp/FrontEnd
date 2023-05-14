@@ -30,3 +30,6 @@
     color: var(--color-secondary);
   }
   
+  .toggleDisplay{
+    display: block!important;
+  }

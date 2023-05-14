@@ -1,7 +1,6 @@
 .container {
   margin-top: 5rem;
-  align-content: center;
-}
+ }
 
 h2.text-center {
   font-size: 24px;
@@ -71,8 +70,9 @@ h2.text-center {
   transition-property: all;
   transition-duration: .1s;
   background: none;
-  color:black;
+  color: white;
   font-size: 16px;
+  text-shadow: 2px 2px 5px #373737;
   }
 
   button {
@@ -109,3 +109,15 @@ h2.text-center {
   .skill-actions-add button:hover{
   transform: scale(1.3);
   }
+
+  .col-4 {
+    width: 100%!important;
+  }
+  
+  @media (min-width: 768px){
+    .col-4 {
+      flex: 0 0 auto;
+    width: 33.33333333%!important;
+    }
+  }
+

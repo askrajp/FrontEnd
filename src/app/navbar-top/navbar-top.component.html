@@ -1,7 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
     <a class="navbar-brand" routerLink="/home">Mi Portfolio</a>
-    <div class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+    onclick="document.getElementsByClassName('collapse navbar-collapse')[0].classList.toggle('toggleDisplay')" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
          <li class="nav-item">
           <a class="nav-link" [routerLink]="['/home']" fragment="profile" routerLinkActive="active">Perfil</a>
